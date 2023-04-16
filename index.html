@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>Patients Records Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Patients Records Register</h2>
+    <form>
+        <fieldset class="control">
+            <legend>Date</legend>
+            <input type="date" id="date" value="">
+        </fieldset>
+
+        <fieldset class="control">
+            <legend>Gender</legend>
+            <input type="radio" id="male" name="gender" checked>Male</input>
+            <input type="radio" id="female" name="gender">Female</input>
+        </fieldset>
+
+        <fieldset class="control">
+            <legend>Full Name</legend>
+            <input type="text" id="name" autofocus>
+        </fieldset>
+
+        <fieldset class="control">
+            <legend>Age<i>(years)</i></legend>
+            <input type="number" id="age" />
+        </fieldset>
+
+        <fieldset class="control">
+            <legend>ABHA Number</legend>
+            <input type="text" id="abha" placeholder="##-####-####-####-####">
+        </fieldset>
+
+        <fieldset class="control">
+            <legend>Eye Image</legend>
+            <input type="file" id="photo" accept="image/*;capture=camera">
+        </fieldset>
+
+        <button type="submit" id="add">Add</button>
+    </form>
+
+    <dialog id="dialog">
+        <div id="dialog-content">
+        </div>
+        <button onclick="closeDialog()">Close</button>
+    </dialog>
+
+    <ul id="list"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
